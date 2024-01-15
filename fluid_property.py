@@ -22,16 +22,3 @@ class fluid:
         self.temperature_saturation = cp.PropsSI('T','P',self.pressure,'Q',0,self.name) # K
 
         return self
-
-# # Remove test stuff below
-
-# temperature = 200
-# pressure = 1
-# name = "Water"
-
-# temperature_conv = uc.celsius_kelvin(temperature)
-# pressure_conv = uc.bar_pascal(pressure)
-
-# fluid1 = fluid(name, temperature_conv, pressure_conv)
-# fluid2 = fluid(name, temperature_conv-100, pressure_conv)
-# a = 1
