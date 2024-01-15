@@ -23,15 +23,15 @@ class fluid:
 
         return self
 
-# Remove test stuff below
+# # Remove test stuff below
 
-temperature = 200
-pressure = 1
-name = "Water"
+# temperature = 200
+# pressure = 1
+# name = "Water"
 
-temperature_conv = uc.celsius_kelvin(temperature)
-pressure_conv = uc.bar_pascal(pressure)
+# temperature_conv = uc.celsius_kelvin(temperature)
+# pressure_conv = uc.bar_pascal(pressure)
 
-fluid1 = fluid(name, temperature_conv, pressure_conv)
-fluid2 = fluid(name, temperature_conv-100, pressure_conv)
-a = 1
+# fluid1 = fluid(name, temperature_conv, pressure_conv)
+# fluid2 = fluid(name, temperature_conv-100, pressure_conv)
+# a = 1
