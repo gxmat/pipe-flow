@@ -20,5 +20,4 @@ class fluid:
         self.pr_number = cp.PropsSI('PRANDTL','T',self.temperature,'P',self.pressure,self.name)
         self.phase = cp.PhaseSI('T',self.temperature,'P',self.pressure,self.name)
         self.temperature_saturation = cp.PropsSI('T','P',self.pressure,'Q',0,self.name) # K
-
         return self
