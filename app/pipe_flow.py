@@ -1,5 +1,6 @@
 # import matplotlib.pyplot as plt
 import pandas as pd
+import matplotlib.pyplot as plt
 from math import pi
 import fluid_properties as fp
 import pipe_properties as pp
@@ -95,3 +96,15 @@ for h in range(bottom, (top + 1), height_increment):
 results_df = pd.DataFrame(results)
 results_df = results_df.set_index('Location')
 print(results_df)
+
+# Generate results diagram
+fig, ax1 = plt.subplots()
+plt.title("Temperature & Pressure vs Pipe Length")
+ax1.plot(results_df['Total Length (m)'], results_df['Temperature (C)'], color = 'r')
+ax2 = ax1.twinx()
+ax2.plot(results_df['Total Length (m)'], results_df['Pressure (bar)'], color = 'b', linestyle = 'dashed')
+ax1.set_xlabel("Total Length (m)")
+ax1.set_ylabel("Temperature (C)", color = 'r')
+ax2.set_ylabel("Pressure (bar)", color = 'b')
+ax1.grid(axis = 'x')
+plt.show()
